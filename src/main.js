@@ -5,10 +5,6 @@ let numberOfCols=120;
 
 let animator=undefined;
 
-const getPreviousScore=function(){
-  let element=document.getElementById('score').innerHTML;
-  return +element.split(' ')[1];
-}
 const updateScore=function(newScore){
   document.getElementById('score').innerHTML=`Score: ${newScore}`;
 }
