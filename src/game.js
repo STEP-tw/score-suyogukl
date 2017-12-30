@@ -3,9 +3,12 @@ const Game=function(topLeft,bottomRight) {
   this.bottomRight=bottomRight;
   this.snake={};
   this.food={};
+  this.score=0;
 }
-Game.prototype.newScore=function(score){
-  return newScore=score+10;
+Game.prototype.newScore=function(){
+  let newScore=this.score+10;
+  this.score=newScore;
+  return newScore;
 }
 
 Game.prototype.addSnake=function(snake) {
