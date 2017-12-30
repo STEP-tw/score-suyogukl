@@ -27,3 +27,7 @@
 #score{
   padding-left: 300px;
 }
+.super-food {
+  background-color: green;
+  border-radius: 50%;
+}
