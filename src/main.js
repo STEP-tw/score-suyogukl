@@ -51,7 +51,9 @@ const addKeyListener=function() {
   grid.onkeyup=changeSnakeDirection;
   grid.focus();
 }
-
+let showScore=function(){
+  document.getElementById('Score').innerText=`Score: 0`
+}
 const createSnake=function() {
   let tail=new Position(12,10,"east");
   let body=[];
@@ -73,6 +75,7 @@ const startGame=function() {
   createFood(numberOfRows,numberOfCols);
   drawFood(food);
   addKeyListener();
+  showScore();
   animator=setInterval(animateSnake,140);
 }
 
