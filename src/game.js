@@ -5,7 +5,7 @@ const Game=function(topLeft,bottomRight) {
   this.food={};
 }
 Game.prototype.updateNewScore=function(score){
-  let newScore=score+this.getFood().growthFactor;
+  let newScore=score+10;
   document.getElementById('score').innerHTML=`Score: ${newScore}`;
   return;
 }
