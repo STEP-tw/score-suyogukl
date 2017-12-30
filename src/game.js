@@ -4,17 +4,12 @@ const Game=function(topLeft,bottomRight) {
   this.snake={};
   this.food={};
 }
-Game.prototype.updateNewScore=function(score){
-  let newScore=score+10;
-  document.getElementById('score').innerHTML=`Score: ${newScore}`;
-  return;
+Game.prototype.newScore=function(score){
+  return newScore=score+10;
 }
 
 Game.prototype.addSnake=function(snake) {
   this.snake=snake;
-}
-Game.prototype.updateScore=function(score){
-  return this.updateNewScore(score);
 }
 
 Game.prototype.getSnake=function() {

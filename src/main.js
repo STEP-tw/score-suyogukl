@@ -9,6 +9,9 @@ const getPreviousScore=function(){
   let element=document.getElementById('score').innerHTML;
   return +element.split(' ')[1];
 }
+const updateScore=function(newScore){
+  document.getElementById('score').innerHTML=`Score: ${newScore}`;
+}
 
 const animateSnake=function() {
   let details=game.move();
@@ -16,7 +19,8 @@ const animateSnake=function() {
   unpaintSnake(details.oldTail);
   paintHead(details.head);
   if(game.hasSnakeEatenFood()) {
-    game.updateScore(getPreviousScore());
+    let newScore=game.newScore(getPreviousScore());
+    updateScore(newScore);
     game.grow();
     game.createFood();
     drawFood(game.getFood());
